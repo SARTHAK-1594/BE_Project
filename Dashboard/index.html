@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>IoT Security Monitoring Dashboard</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <h1>AI IoT Security Dashboard</h1>
+        </div>
+      </header>
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">security</span> IoT Security
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="main-container">
+
+        <div class="main-title">
+          <p class="font-weight-bold">SYSTEM MONITORING</p>
+        </div>
+
+        <div class="main-cards">
+
+          <!-- Temperature -->
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Temperature</p>
+              <span class="material-icons-outlined text-blue">thermostat</span>
+            </div>
+            <span class="text-primary font-weight-bold"></span>
+          </div>
+
+          <!-- Humidity -->
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Humidity</p>
+              <span class="material-icons-outlined text-green">water_damage</span>
+            </div>
+            <span class="text-primary font-weight-bold"></span>
+          </div>
+
+          <!-- Moisture -->
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Moisture</p>
+              <span class="material-icons-outlined text-orange">opacity</span>
+            </div>
+            <span class="text-primary font-weight-bold"></span>
+          </div>
+
+          <!-- Fan -->
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Fan Status</p>
+              <span class="material-icons-outlined text-purple">wind_power</span>
+            </div>
+            <span class="text-primary font-weight-bold"></span>
+          </div>
+
+          <!-- Control -->
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">System Control</p>
+              <span class="material-icons-outlined text-blue">power</span>
+            </div>
+            <span>
+              <button onclick="showData()">Closed</button>
+              <button onclick="hideData()">Open</button>
+            </span>
+          </div>
+
+          <!-- ALERT SYSTEM (UPDATED) -->
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Alerts</p>
+              <span class="material-icons-outlined text-red">notification_important</span>
+            </div>
+            <span id="alert-box" class="text-primary font-weight-bold">
+              N/A
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Charts -->
+        <div class="charts">
+          <div class="charts-card">
+            <p class="chart-title">Temperature</p>
+            <div id="temperature-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Humidity</p>
+            <div id="humidity-chart"></div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </body>
+</html>
